@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - TechStore</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.04 7.76L12 3l8.96 4.76v8.48L12 21l-8.96-4.76V7.76z" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 12l9-4.5M12 12v9M12 12L3 7.5" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>TechStore</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produtos</a></li>
+                    <li><a href="carrinho.html">
+                        Carrinho<span id="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Carrinho -->
+    <section class="cart-section">
+        <div class="container">
+            <h2>Seu Carrinho</h2>
+            
+            <div id="cart-content">
+                <!-- Conteúdo do carrinho será carregado via JavaScript -->
+            </div>
+
+            <div id="cart-empty" style="display: none;">
+                <p>Seu carrinho está vazio!</p>
+                <a href="#produtos" class="btn">Continuar Comprando</a>
+            </div>
+
+            <div id="cart-summary" style="display: none;">
+                <div class="cart-total">
+                    <h3>Resumo do Pedido</h3>
+                    <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+                    <p>Frete: <span id="shipping">R$ 0,00</span></p>
+                    <h2>Total: <span id="total">R$ 0,00</span></h2>
+                    <button id="checkout-btn" class="btn btn-large">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore - Todos os direitos reservados</p>
+            <p>E-commerce MVP - Projeto Acadêmico</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./carrinho.js"></script>
+</body>
+</html>
